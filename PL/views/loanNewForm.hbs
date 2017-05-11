@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Vypůjčení</title>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/default.css">
+</head>
+<body>
+<div id="main">
+    {{>header}}
+    {{>menu}}
+    <main>
+        <form action="/users/{{id}}/new" method="POST">
+            Kopie:<br>
+            <input type="text" name="registrationNumber"><br>
+
+            <input type="submit" value="Vypujcit" name="send">
+        </form>
+    </main>
+    {{>footer}}
+</div>
+</body>
+</html>

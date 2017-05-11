@@ -1,0 +1,13 @@
+﻿<div>
+    <h3>Vypůjčené kopie her:</h3>
+    <a href="/users/{{user.id}}/new">Přidat výpůjčku</a>
+    <table>
+        {{#each loans}}
+            <tr>
+                <td>{{copy}}</td>
+                <td>{{dateFrom}} - {{dateTo}}</td>
+                <td><a href="#">Upravit</a></td>
+            </tr>
+        {{/each}}
+    </table>
+</div>

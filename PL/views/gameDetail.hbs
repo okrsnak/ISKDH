@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO</title>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/default.css">
+</head>
+<body>
+    <div id="main">
+        {{>header}}
+        {{>menu}}
+        <main>
+            <h2>{{name}}</h2>
+            <h4>Počet hráčů: {{numberOfPlayers.min}} - {{numberOfPlayers.max}}</h4>
+            <h4>{{rokVydani}}</h4>
+            <a href="/games/{{id}}/edit">Upravit hru</a>
+            <a href="/games/{{id}}/new">Přidat kopii</a>
+            <p>{{description}}</p>
+            {{>copies}}
+            {{>addReview}}
+            {{>reviews}}
+        </main>
+        {{>footer}}
+    </div>
+</body>
+</html>

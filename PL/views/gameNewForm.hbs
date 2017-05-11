@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Some website</title>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/default.css"></head>
+<body>
+<div id="main">
+	{{>header}}
+	{{>menu}}
+    <main>
+        {{#if send}}
+            {{#if exist}}
+                <p style="color: red">Hra již existuje</p>
+            {{else}}
+                <p style="color: darkgreen">Hra úspěšně přidána</p>
+            {{/if}}
+        {{/if}}
+
+        <form action="/games/new" method="POST">
+            Jméno: <br>
+            <input type="text" name="name"><br>
+            Rok vydání:<br>
+            <input type="text" name="year"><br>
+            Počet hráčů<br>
+            Od: <br>
+            <input type="text" name="min"><br>
+            Do: <br>
+            <input type="text" name="max"><br>
+            Popis:<br>
+            <textarea name="description" rows="10" cols="30">Popis</textarea><br>
+
+            <input type="submit" value="Přidat hru" name="send">
+        </form>
+  	</main>
+ 	{{>footer}}
+</div>
+</body>
+</html>

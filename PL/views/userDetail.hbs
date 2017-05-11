@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO</title>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/default.css">
+</head>
+<body>
+    <div id="main">
+        {{>header}}
+        {{>menu}}
+        <main>
+            <h2>{{user.name}} {{user.surname}}</h2>
+            <h4>Role: {{user.role}}</h4>
+            <h4>{{#if user.active}}Aktivní{{else}}Neaktivní{{/if}}</h4>
+            <h4>Rodné číslo: {{user.identificationNumber}}</h4>
+            <h4>Email: {{user.email}}</h4>
+            <h4>Telefon: {{user.phoneNumber}}</h4>
+            {{>borrowedCopies}}
+            {{>userPayment}}
+        </main>
+        {{>footer}}
+    </div>
+</body>
+</html>

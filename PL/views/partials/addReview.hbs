@@ -1,0 +1,17 @@
+﻿<div>
+    <h3>Přidat recenzi:</h3>
+    {{#if send}}
+        {{#if allOk}}
+            <span class="messageGood">Recenze přidána.</span>
+        {{else}}
+            <span class="messageBad">Něco vyplněno špatně.</span>
+        {{/if}}
+    {{/if}}
+    <form action="TODO:NewReview" method="post">
+        <span>Hodnocení:</span><input type="text" name="rating"/>
+        <span>Text recenze:</span>
+        <textarea name="description" rows="10" cols="100">Text recenze</textarea>
+        <input type="hidden" name="user" value="{{user}}" />
+        <input type="submit" value="Přidat recenzi" name="odeslat" />
+    </form>
+</div>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrace</title>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/default.css">
+</head>
+<body>
+<div id="main">
+    {{>header}}
+    {{>menu}}
+    <main>
+        {{#if send}}
+            {{#if exist}}
+                <p style="color: red">Tento email již existuje!</p>
+            {{else}}
+                <p style="color: darkgreen">Člen úspěšně zaregistrován.</p>
+            {{/if}}
+        {{/if}}
+        <form action="/users/register" method="POST">
+            E-mail:<br>
+            <input type="text" name="email"><br>
+            Heslo:<br>
+            <input type="text" name="password"><br><br>
+            Jméno: <br>
+            <input type="text" name="name"><br>
+            Příjmení:<br>
+            <input type="text" name="surname"><br>
+            Rodné číslo:<br>
+            <input type="text" name="identificationNumber"><br>
+            Telefon:<br>
+            <input type="text" name="phoneNumber"><br>
+
+            <input type="submit" value="Registrovat se" name="send">
+        </form>
+    </main>
+    {{>footer}}
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Přihlášení</title>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/default.css"></head>
+<body>
+<div id="main">
+    {{>header}}
+    {{>menu}}
+    <main>
+
+        <form action="/users/login" method="POST">
+            E-mail: <br>
+            <input type="text" name="email"><br>
+            Heslo:<br>
+            <input type="text" name="password"><br>
+
+
+            <input type="submit" value="Přihlásit se" name="send">
+        </form>
+    </main>
+    {{>footer}}
+</div>
+</body>
+</html>

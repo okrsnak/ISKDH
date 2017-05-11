@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Přidat kopii</title>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/default.css">
+</head>
+<body>
+<div id="main">
+    {{>header}}
+    {{>menu}}
+    <main>
+		<form action="/games/{{id}}/new" method="POST">
+			Evidenční číslo:<br>
+			<input type="text" name="registrationNumber"><br>
+			Pořizovací cena:<br>
+			<input type="text" name="price"><br><br>
+
+			<input type="submit" value="Přidat kopii" name="send">
+        </form>
+    </main>
+    {{>footer}}
+</div>
+</body>
+</html>

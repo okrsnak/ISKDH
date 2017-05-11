@@ -1,0 +1,15 @@
+﻿<div>
+    <h3>Seznam kopií:</h3>
+    <ul>
+        {{#each copy}}
+            <li><span>{{registrationNumber}}</span> - {{state}} <a href="/games/{{../id}}/copy/{{registrationNumber}}/edit">Upravit</a>
+                {{#ifCond 'vypujcena' state}}
+                    <!--TODO-->
+                    <a href="/games/{{../id}}/copy/{{registrationNumber}}/#">Vratit</a></li>
+                {{else}}
+                    <a href="/games/{{../id}}/copy/{{registrationNumber}}/new">Vypůjčit</a></li>
+                {{/ifCond}}
+
+        {{/each}}
+    </ul>
+</div>

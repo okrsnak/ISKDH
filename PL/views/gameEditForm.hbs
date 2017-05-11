@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Some website</title>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/default.css"></head>
+<body>
+<div id="main">
+	{{>header}}
+    	{{>menu}}
+	<main>
+            {{#if exist}}
+                <p style="color: darkgreen">Hra upravena</p>
+            {{/if}}
+
+
+        <form action="/games/{{id}}/edit" method="POST">
+            Jméno: <br>
+            <input type="text" name="name" value="{{name}}"><br>
+            Rok vydání:<br>
+            <input type="text" name="year" value="{{year}}"><br>
+            Počet hráčů<br>
+            Od: <br>
+            <input type="text" name="min" value="{{numberOfPlayers.min}}"><br>
+            Do: <br>
+            <input type="text" name="max" value="{{numberOfPlayers.max}}"><br>
+            Popis:<br>
+            <textarea name="description" rows="10" cols="30">{{description}}</textarea><br>
+
+            <input type="submit" value="Upravit hru" name="send">
+        </form>
+    </main>
+	{{>footer}}
+</div>
+</body>
+</html>

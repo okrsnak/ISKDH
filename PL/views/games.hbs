@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Výpis her</title>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/default.css">
+</head>
+<body>
+<div id="main">
+	{{>header}}
+   	{{>menu}}
+    <main>
+		<a href="/games/new">Přidat novou hru</a>
+		<ul>
+			{{#each games}}
+				<li><a href="/games/{{id}}">{{name}}</a></li>
+			{{/each}}
+		</ul>
+    </main>
+    {{>footer}}
+</div>
+</body>
+</html>

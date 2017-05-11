@@ -1,0 +1,13 @@
+﻿<div>
+    <h3>Seznam plateb:</h3>
+    <a href="TODO:addUserPayment">Přidat platbu</a>
+    <table>
+        {{#each Payment}}
+            <tr>
+                <td>{{date}}</td>
+                <td>{{amount}}</td>
+                <td>{{description}}</td>
+            </tr>
+        {{/each}}
+    </table>
+</div>

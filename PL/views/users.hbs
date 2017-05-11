@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Členové</title>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/default.css">
+</head>
+<body>
+    <div id="main">
+        {{>header}}
+        {{>menu}}
+        <main>
+            <h2>Členové</h2>
+            <table>
+                {{#each users}}
+                    <tr>
+                        <td><a href="/users/{{id}}">{{name}} {{surname}}</a></td>
+                        <td>{{#if active}}Aktivní{{else}}Neaktivní{{/if}}</td>
+                        <td>{{role}}</td>
+                    </tr>
+                {{/each}}
+            </table>
+        </main>
+        {{>footer}}
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Upravit kopii</title>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/default.css">
+</head>
+<body>
+<div id="main">
+    {{>header}}
+    {{>menu}}
+    <main>
+		<form action="/games/{{id}}/copy/{{registrationNumber}}/edit" method="POST">
+			Stav:<br>
+			<select name="state">
+				<option value="volna">volná</option>
+				<option value="vypujcena" selected="selected">vypůjčená</option>
+			</select>
+
+			<input type="submit" value="Upravit kopii" name="send">
+        </form>
+    </main>
+    {{>footer}}
+</div>
+</body>
+</html>
